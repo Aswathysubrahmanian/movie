@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block body%}
+<div class="col-2"></div>
+<div class="col-8"><form action="" method="post" enctype="multipart/form-data" class="border border-warning mt-3 p-5">
+    {%csrf_token%}
+    <label for="">Movie Name:</label>
+    <input type="text" name="name" placeholder="Enter movie name"> <br>
+    <label for="">Description:</label>
+    <input type="text" name="desc" placeholder="Enter movie description"><br>
+
+    <label for="">Movie year:</label>
+    <input type="text" name="year" placeholder="Enter movie year">
+    <br>
+    <label for="">Movie image:</label>
+    <input type="file" name="img">
+    <input type="submit">
+
+</form></div>
+<div class="col-2"></div>
+
+{%endblock%}

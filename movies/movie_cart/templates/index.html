@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body%}
+<center><a href="{%url 'movie_cart:add_movie'%}" class="btn btn-secondary">Add new movie</a>
+</center> <br><br>
+<div class="container">
+
+    <div class="row">
+                        {%for i in movie_list%}
+
+        <div class="col-md-3">
+            <div class="card" style="width: 17rem;">
+  <img src="{{i.img.url}}" style="width:272px;height:200px;"  alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><h2>{{i.name}}</h2></h5>
+  <a href="{%url 'movie_cart:detail' i.id%}" class="btn btn-primary">view Movie</a>
+  </div>
+
+</div>
+        </div>
+          {%endfor%}
+    </div>
+
+</div>
+
+{%endblock%}
+
+
